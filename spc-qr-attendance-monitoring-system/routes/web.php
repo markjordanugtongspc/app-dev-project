@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\QrCodeController;
+
+Route::get('/generate-qr-code/{data}', [QrCodeController::class, 'generateQrCode']);
 
 Route::get('/', function () {
     return ['Laravel' => app()->version()];
